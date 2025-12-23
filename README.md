@@ -40,20 +40,6 @@ enum UserStatus {
 
 
 ## 🧩 Sistema de Cache
-### CacheManager
-
-```swift
-// Acceso unificado a todos
-CacheManager.shared.profile.get()
-CacheManager.shared.exchangeRate.getRates()
-CacheManager.shared.security.isTwoFactorEnabled
-CacheManager.shared.preferences.selectedCurrency
-// NO limpia exchangeRate ni preferences
-CacheManager.shared.clearAll()
-```
-
----
-
 ### 💱 ExchangeRateCache – Tipo de Cambio
 
 ** ❌Problema:** API con límite de 1,500 requests/mes. Con 10,000 usuarios = 1.5M requests = EXCEDE.
