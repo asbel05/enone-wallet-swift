@@ -42,9 +42,9 @@ enum UserStatus {
 ## 🧩 Sistema de Cache
 ### 💱 ExchangeRateCache – Tipo de Cambio
 
-** ❌Problema:** API con límite de 1,500 requests/mes. Con 10,000 usuarios = 1.5M requests = EXCEDE.
+❌ Problema: API con límite de 1,500 requests/mes. Con 100,000 usuarios (5 consultas/día c/u) = 15M requests/mes y EXCEDE.
 
-** ✅Solución:** Cache de 3 niveles:
+✅ Solución: Cache de 3 niveles:
 
 | Nivel | Fuente | Expiración |
 |-------|--------|------------|
@@ -64,7 +64,7 @@ API → Guarda en ambos
 Supabase viejo → Guarda con TTL 5min (reintenta pronto)
 ```
 
-**Resultado:** 1.5M → 720 llamadas/mes (99.95% reducción)
+**Resultado:** 15M → 720 llamadas/mes (99.995% reducción)
 
 ### ⚙️ PreferencesCache – Preferencias de Usuario
 
