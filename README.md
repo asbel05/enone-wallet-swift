@@ -27,7 +27,7 @@ enum UserStatus {
 }
 ```
 
-**Flujo completo:**
+**🔄 Flujo completo:**
 
 | Paso | Acción | Si cierras la app... |
 |------|--------|---------------------|
@@ -54,7 +54,7 @@ CacheManager.shared.clearAll()
 
 ---
 
-### 1. ExchangeRateCache - Tipo de Cambio
+### 💱 ExchangeRateCache – Tipo de Cambio
 
 ** ❌Problema:** API con límite de 1,500 requests/mes. Con 10,000 usuarios = 1.5M requests = EXCEDE.
 
@@ -80,13 +80,13 @@ Supabase viejo → Guarda con TTL 5min (reintenta pronto)
 
 **Resultado:** 1.5M → 720 llamadas/mes (99.95% reducción)
 
-### 2. PreferencesCache - Preferencias de Usuario
+### ⚙️ PreferencesCache – Preferencias de Usuario
 
 Guarda configuraciones que NO se borran al cerrar sesión:
 - Moneda seleccionada (PEN/USD)
 - Otras preferencias de UI
 
-### 3. KeychainManager - Datos Sensibles
+### 🔐 KeychainManager – Datos Sensibles
 
 Usa Keychain de iOS para guardar datos de la tarjeta activa del usuario. Más seguro que UserDefaults que guarda en texto plano.
 
