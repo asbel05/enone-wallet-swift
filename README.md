@@ -31,9 +31,9 @@ enum UserStatus {
 
 | Paso | Acción | Si cierras la app... |
 |------|--------|---------------------|
-| 1. Registro | Crea cuenta con email + password | Al volver → Pantalla de verificación de código |
-| 2. Verificación | Ingresa código OTP del email | Al volver → Pantalla de completar perfil |
-| 3. Completar Perfil | DNI + teléfono + nombre | Al volver → Home (ya está completo) |
+| 1. Registro | Crea cuenta con email + password | Al volver a iniciar sesión → Pantalla de verificación de código |
+| 2. Verificación | Ingresa código OTP del email | Al volver a iniciar sesión → Pantalla de completar perfil |
+| 3. Completar Perfil | DNI + teléfono + nombre | Al volver a iniciar sesión → Home (ya está completo) |
 | 4. Listo | Home con wallets PEN y USD | - |
 
 ---
